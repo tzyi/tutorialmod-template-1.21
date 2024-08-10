@@ -2,6 +2,7 @@ package com.besson.tutorialmod.block.entity;
 
 import com.besson.tutorialmod.data.PolishingMachineData;
 import com.besson.tutorialmod.item.ModItems;
+import com.besson.tutorialmod.recipe.PolishingMachineRecipe;
 import com.besson.tutorialmod.screen.PolishingMachineScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -10,10 +11,13 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.recipe.RecipeEntry;
+import net.minecraft.recipe.input.SingleStackRecipeInput;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -23,6 +27,8 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class PolishingMachineBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<PolishingMachineData>, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
@@ -127,8 +133,22 @@ public class PolishingMachineBlockEntity extends BlockEntity implements Extended
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModItems.ICE_ETHER);
-        this.setStack(OUTPUT_SLOT, new ItemStack(result.getItem(), getStack(OUTPUT_SLOT).getCount() + result.getCount()));
+//        ItemStack result = new ItemStack(ModItems.ICE_ETHER);
+//        this.setStack(OUTPUT_SLOT, new ItemStack(result.getItem(), getStack(OUTPUT_SLOT).getCount() + result.getCount()));
+        Optional<RecipeEntry<PolishingMachineRecipe>> recipe = getCurrentRecipe();
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().getResult(null).getItem(),
+                getStack(OUTPUT_SLOT).getCount() + recipe.get().value().getResult(null).getCount()));
+
+        this.removeStack(INPUT_SLOT, 1);
+    }
+
+    private Optional<RecipeEntry<PolishingMachineRecipe>> getCurrentRecipe() {
+        SimpleInventory inventory = new SimpleInventory(this.size());
+        for (int i = 0; i < this.size(); i++) {
+            inventory.setStack(i, this.getStack(i));
+        }
+        return getWorld().getRecipeManager().getFirstMatch(PolishingMachineRecipe.Type.INSTANCE,
+                new SingleStackRecipeInput(inventory.getStack(INPUT_SLOT)), getWorld());
     }
 
     private boolean hasCraftingFinished() {
@@ -140,9 +160,12 @@ public class PolishingMachineBlockEntity extends BlockEntity implements Extended
     }
 
     private boolean hasRecipe() {
-        ItemStack result = new ItemStack(ModItems.ICE_ETHER);
-        boolean hasInput = getStack(INPUT_SLOT).getItem() == Items.ICE;
-        return hasInput && canInsertAmountIntoOutputSlot(result) && canInsertIntoOutputSlot(result.getItem());
+//        ItemStack result = new ItemStack(ModItems.ICE_ETHER);
+//        boolean hasInput = getStack(INPUT_SLOT).getItem() == Items.ICE;
+//        return hasInput && canInsertAmountIntoOutputSlot(result) && canInsertIntoOutputSlot(result.getItem());
+        Optional<RecipeEntry<PolishingMachineRecipe>> recipe = getCurrentRecipe();
+        return recipe.isPresent() && canInsertAmountIntoOutputSlot(recipe.get().value().getResult(null)) &&
+                canInsertIntoOutputSlot(recipe.get().value().getResult(null).getItem());
     }
 
     private boolean canInsertIntoOutputSlot(Item item) {
