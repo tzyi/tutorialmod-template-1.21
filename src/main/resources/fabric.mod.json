@@ -22,6 +22,9 @@
 		],
 		"client": [
 			"com.besson.tutorialmod.TutorialModClient"
+		],
+		"rei_client": [
+			"com.besson.tutorialmod.compat.ModREIClientPlugins"
 		]
 	},
 	"mixins": [
