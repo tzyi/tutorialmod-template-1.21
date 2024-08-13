@@ -40,6 +40,7 @@ public class ModModelsProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.OIL);
         blockStateModelGenerator.registerSimpleState(ModBlocks.BOX);
         blockStateModelGenerator.registerSimpleState(ModBlocks.POLISHING_MACHINE);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.SIMPLE_BLOCK);
 
     }
 

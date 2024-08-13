@@ -1,10 +1,7 @@
 package com.besson.tutorialmod.block;
 
 import com.besson.tutorialmod.TutorialMod;
-import com.besson.tutorialmod.block.custom.BoxBlock;
-import com.besson.tutorialmod.block.custom.CornCropBlock;
-import com.besson.tutorialmod.block.custom.PolishingMachine;
-import com.besson.tutorialmod.block.custom.StrawberryCropBlock;
+import com.besson.tutorialmod.block.custom.*;
 import com.besson.tutorialmod.block.entity.ModBlockEntities;
 import com.besson.tutorialmod.sound.ModSoundEvents;
 import net.minecraft.block.*;
@@ -46,6 +43,7 @@ public class ModBlocks {
     public static final Block BOX = register("box", new BoxBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> ModBlockEntities.BOX));
     public static final Block POLISHING_MACHINE = register("polishing_machine",
             new PolishingMachine(AbstractBlock.Settings.copy(Blocks.STONE)));
+    public static final Block SIMPLE_BLOCK = register("simple_block", new SimpleBlock(AbstractBlock.Settings.copy(Blocks.STONE)));
     public static void registerBlockItems(String id, Block block) {
         Item item = Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), new BlockItem(block, new Item.Settings()));
         if (item instanceof BlockItem) {

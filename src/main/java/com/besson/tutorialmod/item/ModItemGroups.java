@@ -79,6 +79,8 @@ public class ModItemGroups {
                     entries.add(ModItems.ICE_ETHER_HORSE_ARMOR);
                     entries.add(ModBlocks.BOX);
                     entries.add(ModBlocks.POLISHING_MACHINE);
+                    entries.add(ModItems.SIMPLE_ITEM);
+                    entries.add(ModBlocks.SIMPLE_BLOCK);
                 }).build());
     // 初始化方法
     public static void registerModItemGroups() {
