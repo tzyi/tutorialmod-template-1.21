@@ -57,6 +57,7 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.BOX, "Box");
         translationBuilder.add(ModBlocks.POLISHING_MACHINE, "Polishing Machine");
         translationBuilder.add(ModBlocks.SIMPLE_BLOCK, "Simple Block");
+        translationBuilder.add(ModBlocks.SIMPLE_FENCE, "Simple Fence");
 
         translationBuilder.add("itemGroup.tutorial_group", "Tutorial Group");
 

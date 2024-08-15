@@ -44,6 +44,7 @@ public class ModBlocks {
     public static final Block POLISHING_MACHINE = register("polishing_machine",
             new PolishingMachine(AbstractBlock.Settings.copy(Blocks.STONE)));
     public static final Block SIMPLE_BLOCK = register("simple_block", new SimpleBlock(AbstractBlock.Settings.copy(Blocks.STONE)));
+    public static final Block SIMPLE_FENCE = register("simple_fence", new SimpleFence(AbstractBlock.Settings.copy(Blocks.STONE).nonOpaque()));
     public static void registerBlockItems(String id, Block block) {
         Item item = Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), new BlockItem(block, new Item.Settings()));
         if (item instanceof BlockItem) {

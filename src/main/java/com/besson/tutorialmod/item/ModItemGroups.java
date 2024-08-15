@@ -81,6 +81,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.POLISHING_MACHINE);
                     entries.add(ModItems.SIMPLE_ITEM);
                     entries.add(ModBlocks.SIMPLE_BLOCK);
+                    entries.add(ModBlocks.SIMPLE_FENCE);
                 }).build());
     // 初始化方法
     public static void registerModItemGroups() {
