@@ -45,6 +45,18 @@ public class ModBlocks {
             new PolishingMachine(AbstractBlock.Settings.copy(Blocks.STONE)));
     public static final Block SIMPLE_BLOCK = register("simple_block", new SimpleBlock(AbstractBlock.Settings.copy(Blocks.STONE)));
     public static final Block SIMPLE_FENCE = register("simple_fence", new SimpleFence(AbstractBlock.Settings.copy(Blocks.STONE).nonOpaque()));
+    public static final Block ICE_ETHER_LOG = register("ice_ether_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block ICE_ETHER_WOOD = register("ice_ether_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+    public static final Block STRIPPED_ICE_ETHER_LOG = register("stripped_ice_ether_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block STRIPPED_ICE_ETHER_WOOD = register("stripped_ice_ether_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final Block ICE_ETHER_PLANKS = register("ice_ether_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block ICE_ETHER_LEAVES = register("ice_ether_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
     public static void registerBlockItems(String id, Block block) {
         Item item = Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), new BlockItem(block, new Item.Settings()));
         if (item instanceof BlockItem) {

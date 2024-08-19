@@ -48,6 +48,12 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.BUTTONS)
                 .add(ModBlocks.ICE_ETHER_BUTTON);
 
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.ICE_ETHER_LOG)
+                .add(ModBlocks.ICE_ETHER_WOOD)
+                .add(ModBlocks.STRIPPED_ICE_ETHER_LOG)
+                .add(ModBlocks.STRIPPED_ICE_ETHER_WOOD);
+
 //        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
 //                .add(ModBlocks.ICE_ETHER_FENCE);
     }

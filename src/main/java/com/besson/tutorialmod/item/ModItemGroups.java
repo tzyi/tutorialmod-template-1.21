@@ -82,6 +82,13 @@ public class ModItemGroups {
                     entries.add(ModItems.SIMPLE_ITEM);
                     entries.add(ModBlocks.SIMPLE_BLOCK);
                     entries.add(ModBlocks.SIMPLE_FENCE);
+
+                    entries.add(ModBlocks.ICE_ETHER_LOG);
+                    entries.add(ModBlocks.ICE_ETHER_WOOD);
+                    entries.add(ModBlocks.STRIPPED_ICE_ETHER_LOG);
+                    entries.add(ModBlocks.STRIPPED_ICE_ETHER_WOOD);
+                    entries.add(ModBlocks.ICE_ETHER_PLANKS);
+                    entries.add(ModBlocks.ICE_ETHER_LEAVES);
                 }).build());
     // 初始化方法
     public static void registerModItemGroups() {
