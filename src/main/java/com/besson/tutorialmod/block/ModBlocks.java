@@ -4,6 +4,10 @@ import com.besson.tutorialmod.TutorialMod;
 import com.besson.tutorialmod.block.custom.*;
 import com.besson.tutorialmod.block.entity.ModBlockEntities;
 import com.besson.tutorialmod.sound.ModSoundEvents;
+import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -57,6 +61,18 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
     public static final Block ICE_ETHER_LEAVES = register("ice_ether_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+    public static final Identifier ICE_ETHER_SIGN_TEXTURE = Identifier.of(TutorialMod.MOD_ID, "entity/signs/ice_ether");
+    public static final Identifier ICE_ETHER_HANGING_SIGN_TEXTURE = Identifier.of(TutorialMod.MOD_ID, "entity/signs/hanging/ice_ether");
+    public static final Identifier ICE_ETHER_HANGING_SIGN_GUI = Identifier.of(TutorialMod.MOD_ID, "textures/gui/hanging_signs/ice_ether");
+
+    public static final Block ICE_ETHER_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "ice_ether_sign"),
+            new TerraformSignBlock(ICE_ETHER_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+    public static final Block ICE_ETHER_WALL_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "ice_ether_wall_sign"),
+            new TerraformWallSignBlock(ICE_ETHER_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)));
+    public static final Block ICE_ETHER_HANGING_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "ice_ether_hanging_sign"),
+            new TerraformHangingSignBlock(ICE_ETHER_HANGING_SIGN_TEXTURE, ICE_ETHER_HANGING_SIGN_GUI, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+    public static final Block ICE_ETHER_WALL_HANGING_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "ice_ether_wall_hanging_sign"),
+            new TerraformWallHangingSignBlock(ICE_ETHER_HANGING_SIGN_TEXTURE, ICE_ETHER_HANGING_SIGN_GUI, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
     public static void registerBlockItems(String id, Block block) {
         Item item = Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), new BlockItem(block, new Item.Settings()));
         if (item instanceof BlockItem) {

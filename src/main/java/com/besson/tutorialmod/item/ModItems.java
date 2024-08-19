@@ -58,6 +58,10 @@ public class ModItems {
             new AnimalArmorItem(ModArmorMaterials.ICE_ETHER, AnimalArmorItem.Type.EQUESTRIAN, false, new Item.Settings().maxCount(1)));
     public static final Item SIMPLE_ITEM = registerItems("simple_item", new Item(new Item.Settings()));
 
+    public static final Item ICE_ETHER_SIGN = registerItems("ice_ether_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.ICE_ETHER_SIGN, ModBlocks.ICE_ETHER_WALL_SIGN));
+    public static final Item ICE_ETHER_HANGING_SIGN = registerItems("ice_ether_hanging_sign",
+            new HangingSignItem(ModBlocks.ICE_ETHER_HANGING_SIGN, ModBlocks.ICE_ETHER_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
     private static Item registerItems(String id, Item item){
         // 使用原版的注册方法
 //        return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(TutorialMod.MOD_ID, id)), item);
