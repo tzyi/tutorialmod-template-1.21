@@ -3,10 +3,12 @@ package com.besson.tutorialmod.item;
 import com.besson.tutorialmod.TutorialMod;
 import com.besson.tutorialmod.block.ModBlocks;
 import com.besson.tutorialmod.block.ModFluids;
+import com.besson.tutorialmod.entity.ModBoats;
 import com.besson.tutorialmod.item.custom.HatItem;
 import com.besson.tutorialmod.item.custom.ModArmorItem;
 import com.besson.tutorialmod.item.custom.Prospector;
 import com.besson.tutorialmod.sound.ModJukeboxSongs;
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -62,6 +64,9 @@ public class ModItems {
             new SignItem(new Item.Settings().maxCount(16), ModBlocks.ICE_ETHER_SIGN, ModBlocks.ICE_ETHER_WALL_SIGN));
     public static final Item ICE_ETHER_HANGING_SIGN = registerItems("ice_ether_hanging_sign",
             new HangingSignItem(ModBlocks.ICE_ETHER_HANGING_SIGN, ModBlocks.ICE_ETHER_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
+
+    public static final Item ICE_ETHER_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ICE_ETHER_BOAT, ModBoats.ICE_ETHER_BOAT_KEY, false);
+    public static final Item ICE_ETHER_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ICE_ETHER_CHEST_BOAT, ModBoats.ICE_ETHER_BOAT_KEY, true);
     private static Item registerItems(String id, Item item){
         // 使用原版的注册方法
 //        return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(TutorialMod.MOD_ID, id)), item);

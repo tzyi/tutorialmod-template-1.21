@@ -3,6 +3,7 @@ package com.besson.tutorialmod;
 import com.besson.tutorialmod.block.ModBlocks;
 import com.besson.tutorialmod.block.ModFluids;
 import com.besson.tutorialmod.block.entity.ModBlockEntities;
+import com.besson.tutorialmod.entity.ModBoats;
 import com.besson.tutorialmod.item.ModItemGroups;
 import com.besson.tutorialmod.item.ModItems;
 import com.besson.tutorialmod.mixin.GrassColorsMixin;
@@ -46,6 +47,7 @@ public class TutorialMod implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
 		ModRecipeTypes.registerRecipeTypes();
+		ModBoats.registerModBoats();
 
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_LOG, ModBlocks.STRIPPED_ICE_ETHER_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_WOOD, ModBlocks.STRIPPED_ICE_ETHER_WOOD);

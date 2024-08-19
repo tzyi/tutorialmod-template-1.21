@@ -2,8 +2,10 @@ package com.besson.tutorialmod;
 
 import com.besson.tutorialmod.block.ModBlocks;
 import com.besson.tutorialmod.block.ModFluids;
+import com.besson.tutorialmod.entity.ModBoats;
 import com.besson.tutorialmod.screen.ModScreenHandlers;
 import com.besson.tutorialmod.screen.PolishingMachineScreen;
+import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
@@ -26,5 +28,7 @@ public class TutorialModClient implements ClientModInitializer {
                 ));
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.OIL, ModFluids.FLOWING_OIL);
         HandledScreens.register(ModScreenHandlers.POLISHING_MACHINE_SCREEN_HANDLER, PolishingMachineScreen::new);
+
+        TerraformBoatClientHelper.registerModelLayers(ModBoats.ICE_ETHER_BOAT, false);
     }
 }

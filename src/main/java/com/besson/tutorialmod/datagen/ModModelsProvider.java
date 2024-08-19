@@ -78,6 +78,8 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ICE_ETHER_HORSE_ARMOR, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.ICE_ETHER_HANGING_SIGN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ICE_ETHER_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ICE_ETHER_CHEST_BOAT, Models.GENERATED);
 
     }
 }
