@@ -14,6 +14,7 @@ import com.besson.tutorialmod.tags.ModBlockTags;
 import com.besson.tutorialmod.util.ModCustomTrades;
 import com.besson.tutorialmod.util.ModLootTableModifiers;
 import com.besson.tutorialmod.villager.ModVillagers;
+import com.besson.tutorialmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -48,6 +49,7 @@ public class TutorialMod implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 		ModRecipeTypes.registerRecipeTypes();
 		ModBoats.registerModBoats();
+		ModWorldGeneration.registerWorldGenerations();
 
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_LOG, ModBlocks.STRIPPED_ICE_ETHER_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_WOOD, ModBlocks.STRIPPED_ICE_ETHER_WOOD);
