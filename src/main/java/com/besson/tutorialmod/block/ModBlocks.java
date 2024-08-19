@@ -4,6 +4,7 @@ import com.besson.tutorialmod.TutorialMod;
 import com.besson.tutorialmod.block.custom.*;
 import com.besson.tutorialmod.block.entity.ModBlockEntities;
 import com.besson.tutorialmod.sound.ModSoundEvents;
+import com.besson.tutorialmod.world.tree.ModTreeGenerator;
 import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
 import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
 import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
@@ -73,6 +74,9 @@ public class ModBlocks {
             new TerraformHangingSignBlock(ICE_ETHER_HANGING_SIGN_TEXTURE, ICE_ETHER_HANGING_SIGN_GUI, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
     public static final Block ICE_ETHER_WALL_HANGING_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "ice_ether_wall_hanging_sign"),
             new TerraformWallHangingSignBlock(ICE_ETHER_HANGING_SIGN_TEXTURE, ICE_ETHER_HANGING_SIGN_GUI, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
+
+    public static final Block ICE_ETHER_SAPLING = register("ice_ether_tree_sapling",
+            new SaplingBlock(ModTreeGenerator.ICE_ETHER_TREE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
     public static void registerBlockItems(String id, Block block) {
         Item item = Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), new BlockItem(block, new Item.Settings()));
         if (item instanceof BlockItem) {

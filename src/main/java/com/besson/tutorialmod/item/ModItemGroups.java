@@ -93,6 +93,7 @@ public class ModItemGroups {
                     entries.add(ModItems.ICE_ETHER_HANGING_SIGN);
                     entries.add(ModItems.ICE_ETHER_BOAT);
                     entries.add(ModItems.ICE_ETHER_CHEST_BOAT);
+                    entries.add(ModBlocks.ICE_ETHER_SAPLING);
                 }).build());
     // 初始化方法
     public static void registerModItemGroups() {
