@@ -24,5 +24,7 @@ public class RenderLayersMixin {
         BLOCKS.put(ModBlocks.STRAWBERRY_CROP, RenderLayer.getCutout());
         BLOCKS.put(ModBlocks.CORN_CROP, RenderLayer.getCutout());
         BLOCKS.put(ModBlocks.ICE_ETHER_SAPLING, RenderLayer.getCutout());
+        BLOCKS.put(ModBlocks.SIMPLE_FLOWER, RenderLayer.getCutout());
+        BLOCKS.put(ModBlocks.POTTED_SIMPLE_FLOWER, RenderLayer.getCutout());
     }
 }

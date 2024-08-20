@@ -48,6 +48,7 @@ public class ModModelsProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ICE_ETHER_LEAVES);
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.ICE_ETHER_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.SIMPLE_FLOWER, ModBlocks.POTTED_SIMPLE_FLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
 
     }
 

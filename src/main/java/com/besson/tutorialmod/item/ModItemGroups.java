@@ -94,6 +94,7 @@ public class ModItemGroups {
                     entries.add(ModItems.ICE_ETHER_BOAT);
                     entries.add(ModItems.ICE_ETHER_CHEST_BOAT);
                     entries.add(ModBlocks.ICE_ETHER_SAPLING);
+                    entries.add(ModBlocks.SIMPLE_FLOWER);
                 }).build());
     // 初始化方法
     public static void registerModItemGroups() {

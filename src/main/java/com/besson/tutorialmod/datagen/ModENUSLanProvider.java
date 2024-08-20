@@ -69,6 +69,7 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ICE_ETHER_PLANKS, "Ice Ether Planks");
         translationBuilder.add(ModBlocks.ICE_ETHER_LEAVES, "Ice Ether Leaves");
         translationBuilder.add(ModBlocks.ICE_ETHER_SAPLING, "Ice Ether Sapling");
+        translationBuilder.add(ModBlocks.SIMPLE_FLOWER, "Simple Flower");
 
         translationBuilder.add("itemGroup.tutorial_group", "Tutorial Group");
 
