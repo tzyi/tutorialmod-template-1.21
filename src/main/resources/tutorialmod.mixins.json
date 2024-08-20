@@ -4,9 +4,11 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AbstractFurnaceBlockEntityMixin",
+    "CraftingResultSlotMixin",
     "EndermanEntityMixin",
     "ExampleMixin",
-    "GrassColorsMixin"
+    "GrassColorsMixin",
+    "RepairItemRecipeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

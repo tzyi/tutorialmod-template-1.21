@@ -54,5 +54,10 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .criterion("has_item", RecipeProvider.conditionsFromItem(Items.STONE))
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "ice_ether_ore"));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ANTHRACITE, 1)
+                .input(Items.COAL)
+                .input(ModItems.FIRE_ETHER)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.COAL))
+                .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "anthracite"));
     }
 }

@@ -4,6 +4,7 @@ import com.besson.tutorialmod.TutorialMod;
 import com.besson.tutorialmod.block.ModBlocks;
 import com.besson.tutorialmod.block.ModFluids;
 import com.besson.tutorialmod.entity.ModBoats;
+import com.besson.tutorialmod.item.custom.FireEther;
 import com.besson.tutorialmod.item.custom.HatItem;
 import com.besson.tutorialmod.item.custom.ModArmorItem;
 import com.besson.tutorialmod.item.custom.Prospector;
@@ -26,7 +27,7 @@ public class ModItems {
     public static final Item ANTHRACITE = registerItems("anthracite", new Item(new Item.Settings()));
     public static final Item PROSPECTOR = registerItems("prospector", new Prospector(new Item.Settings().maxDamage(127)));
     public static final Item PLATE = registerItems("plate", new Item(new Item.Settings()));
-    public static final Item FIRE_ETHER = registerItems("fire_ether", new Item(new Item.Settings()));
+    public static final Item FIRE_ETHER = registerItems("fire_ether", new FireEther(new Item.Settings()));
     public static final Item FIRE_ETHER_SWORD = registerItems("fire_ether_sword", new SwordItem(ModToolMaterials.FIRE_ETHER,
             new Item.Settings().fireproof().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.FIRE_ETHER, 3, -2.0f))));
     public static final Item FIRE_ETHER_SHOVEL = registerItems("fire_ether_shovel", new ShovelItem(ModToolMaterials.FIRE_ETHER,
