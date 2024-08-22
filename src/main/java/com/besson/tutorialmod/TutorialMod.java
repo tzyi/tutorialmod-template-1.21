@@ -9,6 +9,7 @@ import com.besson.tutorialmod.entity.custom.TigerEntity;
 import com.besson.tutorialmod.item.ModItemGroups;
 import com.besson.tutorialmod.item.ModItems;
 import com.besson.tutorialmod.mixin.GrassColorsMixin;
+import com.besson.tutorialmod.particle.ModParticles;
 import com.besson.tutorialmod.recipe.ModRecipeTypes;
 import com.besson.tutorialmod.screen.ModScreenHandlers;
 import com.besson.tutorialmod.sound.ModSoundEvents;
@@ -53,6 +54,7 @@ public class TutorialMod implements ModInitializer {
 		ModRecipeTypes.registerRecipeTypes();
 		ModBoats.registerModBoats();
 		ModWorldGeneration.registerWorldGenerations();
+		ModParticles.registerModParticles();
 
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_LOG, ModBlocks.STRIPPED_ICE_ETHER_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_WOOD, ModBlocks.STRIPPED_ICE_ETHER_WOOD);
