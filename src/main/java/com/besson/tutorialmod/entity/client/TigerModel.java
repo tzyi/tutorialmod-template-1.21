@@ -54,6 +54,7 @@ public class TigerModel<T extends TigerEntity> extends SinglePartEntityModel<T> 
 
 		this.animateMovement(TigerAnimation.WALK, limbAngle, limbDistance, 2f, 2.5f);
 		this.updateAnimation(TigerEntity.idleAnimation, TigerAnimation.IDLE, animationProgress, 1f);
+		this.updateAnimation(TigerEntity.attackAnimation, TigerAnimation.ATTACK, animationProgress, 1f);
 	}
 
 	private void setHeadAngles(float headYaw, float headPitch) {

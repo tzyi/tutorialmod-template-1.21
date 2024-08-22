@@ -1,6 +1,7 @@
 package com.besson.tutorialmod.datagen;
 
 import com.besson.tutorialmod.block.ModBlocks;
+import com.besson.tutorialmod.entity.ModEntities;
 import com.besson.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -44,6 +45,7 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ICE_ETHER_HANGING_SIGN, "Ice Ether Hanging Sign");
         translationBuilder.add(ModItems.ICE_ETHER_BOAT, "Ice Ether Boat");
         translationBuilder.add(ModItems.ICE_ETHER_CHEST_BOAT, "Ice Ether Chest Boat");
+        translationBuilder.add(ModItems.TIGER_SPAWN_EGG, "Tiger Spawn Egg");
 
         translationBuilder.add(ModBlocks.ICE_ETHER_BLOCK, "Ice Ether Block");
         translationBuilder.add(ModBlocks.ICE_ETHER_ORE, "Ice Ether Ore");
@@ -70,6 +72,8 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ICE_ETHER_LEAVES, "Ice Ether Leaves");
         translationBuilder.add(ModBlocks.ICE_ETHER_SAPLING, "Ice Ether Sapling");
         translationBuilder.add(ModBlocks.SIMPLE_FLOWER, "Simple Flower");
+
+        translationBuilder.add(ModEntities.TIGER, "Tiger");
 
         translationBuilder.add("itemGroup.tutorial_group", "Tutorial Group");
 

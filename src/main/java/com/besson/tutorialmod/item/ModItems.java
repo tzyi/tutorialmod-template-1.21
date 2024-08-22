@@ -4,6 +4,7 @@ import com.besson.tutorialmod.TutorialMod;
 import com.besson.tutorialmod.block.ModBlocks;
 import com.besson.tutorialmod.block.ModFluids;
 import com.besson.tutorialmod.entity.ModBoats;
+import com.besson.tutorialmod.entity.ModEntities;
 import com.besson.tutorialmod.item.custom.FireEther;
 import com.besson.tutorialmod.item.custom.HatItem;
 import com.besson.tutorialmod.item.custom.ModArmorItem;
@@ -68,6 +69,9 @@ public class ModItems {
 
     public static final Item ICE_ETHER_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ICE_ETHER_BOAT, ModBoats.ICE_ETHER_BOAT_KEY, false);
     public static final Item ICE_ETHER_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ICE_ETHER_CHEST_BOAT, ModBoats.ICE_ETHER_BOAT_KEY, true);
+
+    public static final Item TIGER_SPAWN_EGG = registerItems("tiger_spawn_egg",
+            new SpawnEggItem(ModEntities.TIGER, 0x252525, 0x4D4D4D, new Item.Settings()));
     private static Item registerItems(String id, Item item){
         // 使用原版的注册方法
 //        return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(TutorialMod.MOD_ID, id)), item);
