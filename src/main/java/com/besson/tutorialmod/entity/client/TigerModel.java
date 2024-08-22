@@ -4,11 +4,13 @@
 
 package com.besson.tutorialmod.entity.client;
 
+import com.besson.tutorialmod.entity.animation.TigerAnimation;
 import com.besson.tutorialmod.entity.custom.TigerEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.math.MathHelper;
 
 public class TigerModel<T extends TigerEntity> extends SinglePartEntityModel<T> {
 	private final ModelPart tiger;
@@ -47,7 +49,18 @@ public class TigerModel<T extends TigerEntity> extends SinglePartEntityModel<T> 
 
 	@Override
 	public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+		this.getPart().traverse().forEach(ModelPart::resetTransform);
+		this.setHeadAngles(headYaw, headPitch);
 
+		this.animateMovement(TigerAnimation.WALK, limbAngle, limbDistance, 2f, 2.5f);
+		this.updateAnimation(TigerEntity.idleAnimation, TigerAnimation.IDLE, animationProgress, 1f);
+	}
+
+	private void setHeadAngles(float headYaw, float headPitch) {
+		headYaw = MathHelper.clamp(headYaw, -30.0f, 30.0f);
+		headPitch = MathHelper.clamp(headPitch, -25.0f, 45.0f);
+		this.head.yaw = headYaw * 0.017453292f;
+		this.head.pitch = headPitch * 0.017453292f;
 	}
 
 	@Override
