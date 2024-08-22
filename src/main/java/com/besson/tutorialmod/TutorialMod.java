@@ -4,6 +4,8 @@ import com.besson.tutorialmod.block.ModBlocks;
 import com.besson.tutorialmod.block.ModFluids;
 import com.besson.tutorialmod.block.entity.ModBlockEntities;
 import com.besson.tutorialmod.entity.ModBoats;
+import com.besson.tutorialmod.entity.ModEntities;
+import com.besson.tutorialmod.entity.custom.TigerEntity;
 import com.besson.tutorialmod.item.ModItemGroups;
 import com.besson.tutorialmod.item.ModItems;
 import com.besson.tutorialmod.mixin.GrassColorsMixin;
@@ -17,6 +19,7 @@ import com.besson.tutorialmod.villager.ModVillagers;
 import com.besson.tutorialmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
@@ -60,6 +63,8 @@ public class TutorialMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_ICE_ETHER_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ICE_ETHER_LEAVES, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ICE_ETHER_PLANKS, 5, 20);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.TIGER, TigerEntity.createTigerAttributes());
 
 
 //		int[] colorMap = GrassColorsMixin.getColorMap();
