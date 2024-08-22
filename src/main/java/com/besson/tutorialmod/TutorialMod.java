@@ -24,6 +24,8 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -68,6 +70,12 @@ public class TutorialMod implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.TIGER, TigerEntity.createTigerAttributes());
 
+		CustomPortalBuilder.beginPortal()
+				.frameBlock(ModBlocks.ICE_ETHER_BLOCK)
+						.lightWithItem(ModItems.ICE_ETHER)
+								.destDimID(Identifier.of(TutorialMod.MOD_ID, "test"))
+										.tintColor(0xc76a4f)
+												.registerPortal();
 
 //		int[] colorMap = GrassColorsMixin.getColorMap();
 //        LOGGER.info("Grass color map length: {}", colorMap.length);
