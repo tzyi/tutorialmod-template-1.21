@@ -1,4 +1,4 @@
-// 1.21	2024-08-22T12:16:29.8143989	TutorialMod/World Gen Data Provider
+// 1.21	2024-08-22T13:30:26.8043241	TutorialMod/World Gen Data Provider
 0d7487c479b6b30feb19568ef62db57e0a8c79d3 data\tutorialmod\worldgen\placed_feature\end_ice_ether_ore_placed.json
 b5f89b58e4e67c876fd4610b94db48fec08c9d1c data\tutorialmod\worldgen\placed_feature\ice_ether_ore_placed.json
 b63bc8449189b81702e3074ebdedb7f34f2dc6f4 data\tutorialmod\worldgen\configured_feature\end_ice_ether_ore.json
@@ -7,5 +7,6 @@ b63bc8449189b81702e3074ebdedb7f34f2dc6f4 data\tutorialmod\worldgen\configured_fe
 2f86e6556d3aa0b56943d286deb728363c87f579 data\tutorialmod\worldgen\configured_feature\simple_flower.json
 bc6e38fd021f732f658c16c27bc3d8bea2616181 data\tutorialmod\worldgen\configured_feature\nether_ice_ether_ore.json
 429d2484b2aea3b7ae276362904eecf8d469928f data\tutorialmod\worldgen\placed_feature\simple_flower_placed.json
+c54c8b56ea306b945e8da92c707f4a44dbbc9bf6 data\tutorialmod\worldgen\biome\diamond_biome.json
 645fde8b89c19a0d5a44002f754a8600ca0d67ce data\tutorialmod\worldgen\placed_feature\nether_ice_ether_ore_placed.json
 023758fa1cc39dbe4745abe178261c99218c0e87 data\tutorialmod\worldgen\configured_feature\ice_ether_tree.json
