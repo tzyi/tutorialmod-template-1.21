@@ -35,5 +35,14 @@ public class ModItemTagsProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.ICE_ETHER_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_ICE_ETHER_LOG.asItem())
                 .add(ModBlocks.STRIPPED_ICE_ETHER_WOOD.asItem());
+
+        getOrCreateTagBuilder(ItemTags.SWORD_ENCHANTABLE)
+                .add(ModItems.FIRE_ETHER_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)
+                .add(ModItems.FIRE_ETHER_PICKAXE)
+                .add(ModItems.FIRE_ETHER_HOE)
+                .add(ModItems.FIRE_ETHER_SHOVEL)
+                .add(ModItems.FIRE_ETHER_AXE);
     }
 }

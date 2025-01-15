@@ -1,5 +1,6 @@
 package com.besson.tutorialmod.block.custom;
 
+import com.besson.tutorialmod.particle.ModParticles;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
@@ -12,9 +13,11 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
@@ -75,5 +78,16 @@ public class SimpleBlock extends Block {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
+    }
+
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        float f = 0.25f;
+        if (random.nextFloat() < f) {
+            world.addParticle(ModParticles.GREEN_FLAME,
+                    pos.getX() + random.nextDouble(), pos.getY() + random.nextDouble(), pos.getZ() + random.nextDouble(),
+                    0, 0.1, 0);
+        }
+        super.randomDisplayTick(state, world, pos, random);
     }
 }

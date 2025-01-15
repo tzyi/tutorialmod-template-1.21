@@ -1,6 +1,7 @@
 package com.besson.tutorialmod;
 
 import com.besson.tutorialmod.datagen.*;
+import com.besson.tutorialmod.enchantment.ModEnchantments;
 import com.besson.tutorialmod.sound.ModJukeboxSongs;
 import com.besson.tutorialmod.world.ModConfiguredFeatures;
 import com.besson.tutorialmod.world.ModPlacedFeatures;
@@ -33,5 +34,6 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
 	}
 }

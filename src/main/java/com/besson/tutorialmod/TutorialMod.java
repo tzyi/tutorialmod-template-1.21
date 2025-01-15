@@ -3,6 +3,7 @@ package com.besson.tutorialmod;
 import com.besson.tutorialmod.block.ModBlocks;
 import com.besson.tutorialmod.block.ModFluids;
 import com.besson.tutorialmod.block.entity.ModBlockEntities;
+import com.besson.tutorialmod.enchantment.ModEnchantmentEffects;
 import com.besson.tutorialmod.entity.ModBoats;
 import com.besson.tutorialmod.entity.ModEntities;
 import com.besson.tutorialmod.entity.custom.TigerEntity;
@@ -57,6 +58,7 @@ public class TutorialMod implements ModInitializer {
 		ModBoats.registerModBoats();
 		ModWorldGeneration.registerWorldGenerations();
 		ModParticles.registerModParticles();
+		ModEnchantmentEffects.registerModEnchantmentEffects();
 
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_LOG, ModBlocks.STRIPPED_ICE_ETHER_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_WOOD, ModBlocks.STRIPPED_ICE_ETHER_WOOD);

@@ -1,5 +1,7 @@
-// 1.21	2024-08-22T15:17:26.2869397	TutorialMod/Tags for minecraft:item
+// 1.21	2025-01-15T12:11:17.8875595	TutorialMod/Tags for minecraft:item
 17afd73415e24ef88c7921669e46064d5dbaed78 data\minecraft\tags\item\logs_that_burn.json
 f801171d5e1d0f7066b40c2037b6b4fcc667af68 data\minecraft\tags\item\creeper_drop_music_discs.json
+6fd4925b566e6157fd9658fad1d3694cff9ceb57 data\minecraft\tags\item\enchantable\sword.json
 345cb977fe2e6679d1e86e8d292ddb3f92fc23e5 data\tutorialmod\tags\item\sugar_tag.json
+c690635f5d17b2ec8155a1754653e22c6a032757 data\minecraft\tags\item\enchantable\mining.json
 dec1688c3cfcb546ab9538dc9e3665da535e33ba data\minecraft\tags\item\trimmable_armor.json
