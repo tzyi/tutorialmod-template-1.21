@@ -50,6 +50,9 @@ project-root/
 
 ```
 
+# 原代碼路徑
+D:\0004_project\Github\tutorialmod-template-1.21\.gradle\loom-cache\minecraftMaven\net\minecraft\minecraft-merged-4eb0fe4bb6\1.21-net.fabricmc.yarn.1_21.1.21+build.2-v2\minecraft-merged-4eb0fe4bb6-1.21-net.fabricmc.yarn.1_21.1.21+build.2-v2.jar
+
 
 
 <br>
